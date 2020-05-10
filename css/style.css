@@ -158,15 +158,6 @@
   list-style-type: none;
 }
 
-.sidebar__cats-item {
-  -webkit-transition: color 0.4s ease;
-  transition: color 0.4s ease;
-}
-
-.sidebar__cats-item:hover {
-  color: 1px solid #262626;
-}
-
 .sidebar__cats-item:not(:last-child) {
   margin-bottom: 15px;
 }
@@ -242,7 +233,7 @@
 .footer__bot {
   padding: 15px 0;
   background: #000;
-  color: #aeaeae;
+  color: #000;
   text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
