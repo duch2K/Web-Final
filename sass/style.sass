@@ -1,0 +1,129 @@
+$main-color: #262626
+    
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: sans-serif
+
+.container
+    margin: 0 auto
+    max-width: 1170px
+
+.header
+    padding: 15px 0
+    &__inner
+        display: flex
+    &__logo
+        flex: 1
+        img
+            width: 100%
+    &__center
+        flex: 3
+        display: flex
+        justify-content: center
+        align-items: center
+    &__search
+        padding: 5px 10px
+        width: 80%
+        display: flex
+        align-items: center
+        border: 1.5px solid #aeaeaebd
+        border-radius: 18px 
+        input
+            display: block
+            width: 100%
+            border: none
+            font-size: 18px
+            padding-right: 5px
+        input:focus
+            outline: none
+        &__search-input
+            flex: 9
+        &__search-btn
+            flex: 1
+            display: flex
+            justify-content: center
+            align-items: center
+            .search-btn
+                width: 5px
+    &__r
+        flex: 1
+        display: flex
+        justify-content: space-around
+        align-items: center
+
+.nav
+    background: $main-color
+    color: #fff
+    &__inner
+        display: flex
+    &__item
+        padding: 15px 25px
+        transition: background 0.4s ease 
+        &:hover
+            background: #fff
+            color: $main-color
+
+.wrapper
+    &__inner
+        padding: 30px 0
+        display: flex
+
+.sidebar
+    flex: 1
+    padding-right: 30px
+    &__catalogue
+        &-title
+            margin-bottom: 15px
+        .line
+            margin-bottom: 15px
+    &__cats
+        list-style-type: none
+        &-item
+            &:not(:last-child)
+                margin-bottom: 15px
+            a
+                text-decoration: none
+                color: #aeaeae
+
+
+.main
+    flex: 3.5  
+    &__title
+        margin-bottom: 20px
+    &__shop
+        display: flex
+        flex-wrap: wrap
+        margin: -10px -5px
+    .shop-item
+        flex: 1 0 230px
+        padding: 10px 5px
+        &-img
+            display: flex
+            justify-content: center
+            align-items: center
+            min-height: 220px
+            background: #aeaeae
+            margin-bottom: 10px
+            img
+                display: block
+                width: 100%
+        &-title
+            margin-bottom: 10px
+        &-price
+            margin-bottom: 10px
+        &-cart
+            color: #0ba520
+    
+.line
+    width: 100%
+    border-bottom: 1.5px solid #aeaeaea4
+
+.footer
+    &__top
+    &__bot
+        padding: 15px 0
+        background: #000
+        color: #aeaeae
+        text-align: center
