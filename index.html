@@ -4,24 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DEMAL-Tech</title>
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="header">
         <div class="container">
-            <div class="header__logo"></div>
-            <div class="header__search"></div>
-            <div class="header__cart"></div>
-            <div class="header__user"></div>
+            <div class="header__inner">
+                <div class="header__logo">
+                    <img src="img/logo.png" alt="DEMAL-Tech logo">
+                </div>
+                <div class="header__center">
+                    <div class="header__search">
+                        <input type="text" class="header__search-input" placeholder="Search in catalogue...">
+                        <div class="header__search-btn">
+                            <img src="img/search.svg" class="search-btn" alt="search">
+                        </div>
+                    </div>
+                </div>
+                <div class="header__r">
+                    <div class="header__cart"></div>
+                    <div class="header__user"></div>
+                </div>
+            </div>
         </div>
     </header>
 
     <nav class="nav">
         <div class="container">
-            <div class="nav__item">Catalogue</div>
-            <div class="nav__item">About</div>
-            <div class="nav__item">Contacts</div>
-            <div class="nav__item">Delivery</div>
+            <div class="nav__inner">
+                <div class="nav__item">Catalogue</div>
+                <div class="nav__item">About</div>
+                <div class="nav__item">Contacts</div>
+                <div class="nav__item">Delivery</div>
+            </div>
         </div>
     </nav>
 
@@ -38,7 +53,11 @@
     </div>
 
     <footer class="footer">
-        &copy; DEMAL-TECH 2020
+        <div class="container">
+            <div class="footer__inner">
+                &copy; DEMAL-TECH 2020
+            </div>
+        </div>
     </footer>
 </body>
 </html>
