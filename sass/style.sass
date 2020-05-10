@@ -17,6 +17,7 @@ $main-color: #262626
     &__logo
         flex: 1
         img
+            display: block
             width: 100%
     &__center
         flex: 3
@@ -61,9 +62,13 @@ $main-color: #262626
     &__item
         padding: 15px 25px
         transition: background 0.4s ease 
+        a
+            text-decoration: none
+            color: #fff
         &:hover
             background: #fff
-            color: $main-color
+            a
+                color: $main-color
 
 .wrapper
     &__inner
@@ -81,6 +86,9 @@ $main-color: #262626
     &__cats
         list-style-type: none
         &-item
+            &:hover
+                a
+                    color: $main-color
             &:not(:last-child)
                 margin-bottom: 15px
             a
@@ -122,8 +130,57 @@ $main-color: #262626
 
 .footer
     &__top
+        background: #aeaeae
+        padding: 15px 0
+    &__top-in
+        display: flex
+        justify-content: space-between
+    &__logo
+        flex: 0.7
+        img
+            display: block
+            width: 100%
+    &__right
+        flex: 3
+        display: flex
+        justify-content: center
+            
     &__bot
         padding: 15px 0
         background: #000
         color: #aeaeae
         text-align: center
+
+
+.product
+    display: flex
+    
+    &__image
+        background: #aeaeae
+        padding: 10px
+        margin: 10px            
+
+    &__title
+        font-size: 50px
+        padding: 2px
+    &__price
+        font-size: 30px
+        padding: 2px
+    &__desc
+        font-size: 20px
+        padding: 2px
+    &__tocart       
+        display: block
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 12px 40px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px;
+
+
+    &__characteristics
+        
+        
