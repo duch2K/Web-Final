@@ -15,5 +15,3 @@
     );
 
     require "db.php";
-
-?>
