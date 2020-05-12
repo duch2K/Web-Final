@@ -306,6 +306,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-top: 20px;
 }
 
 .product__image {
@@ -313,6 +314,10 @@
   padding: 10px;
   margin: 10px;
   width: 50%;
+}
+
+.product__image img {
+  width: 100%;
 }
 
 .product__title {
