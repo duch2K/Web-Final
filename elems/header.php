@@ -9,11 +9,31 @@
         ->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
+<div class="overlay">
+    <div>
+        
+    </div>
+    <form action="" method="POST">
+        <div class="form-input">
+            <label></label>
+            <input>
+        </div>
+        <div class="form-input">
+            <label></label>
+            <input>
+        </div>
+        <button type="submit">Log in</button>
+        
+    </form>
+</div>
+
 <header class="header">
     <div class="container">
         <div class="header__inner">
             <div class="header__logo">
-                <img src="img/logo.png" alt="DEMAL-Tech logo">
+                <a href="index.php">
+                    <img src="img/logo.png" alt="DEMAL-Tech logo">
+                </a>
             </div>
             <div class="header__center">
                 <div class="header__search">
@@ -41,7 +61,6 @@
             <div class="nav__item"><a href="#">Catalogue</a></div>
             <div class="nav__item"><a href="#">About</a></div>
             <div class="nav__item"><a href="#">Contacts</a></div>
-            <div class="nav__item"><a href="#">Delivery</a></div>
         </div>
     </div>
 </nav>
