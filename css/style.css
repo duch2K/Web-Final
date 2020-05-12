@@ -239,6 +239,12 @@
   text-decoration: none;
 }
 
+.main__shop .shop-item-link {
+  text-decoration: none;
+  display: block;
+  color: #000;
+}
+
 .line {
   width: 100%;
   border-bottom: 1.5px solid #aeaeaea4;

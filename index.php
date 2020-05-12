@@ -51,16 +51,16 @@
 
                 <?php foreach ($products as $product) { ?>
                     <div class="shop-item">
-                        <a href="product.php?product=<?php echo $product['id'] ?>">
+                        <a href="product.php?product=<?php echo $product['id'] ?>" class="shop-item-link">
                             <div class="shop-item-img">
                                 <img src="img/products/<?php echo $product['img'] ?>" alt="<?php echo $product['name'] ?>">
                             </div>
                         </a>
-                        <a href="product.php?product=<?php echo $product['id'] ?>">
-                            <h3 class="shop-item-title">
+                        <h3 class="shop-item-title">
+                            <a href="product.php?product=<?php echo $product['id'] ?>" class="shop-item-link">
                                 <?php echo $product['name'] ?>
-                            </h3>
-                        </a>
+                            </a>
+                        </h3>
                         <div class="shop-item-price"><?php echo $product['price'] ?> USD</div>
                         <div class="shop-item-cart"><a href="">Add to cart</a></div>
                     </div>
