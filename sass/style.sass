@@ -61,7 +61,7 @@ $main-color: #262626
         display: flex
     &__item
         padding: 15px 25px
-        transition: background 0.4s ease 
+        transition: background 0.3s ease 
         a
             text-decoration: none
             color: #fff
@@ -111,8 +111,7 @@ $main-color: #262626
             display: flex
             justify-content: center
             align-items: center
-            min-height: 220px
-            background: #aeaeae
+            max-height: 220px
             margin-bottom: 10px
             img
                 display: block
@@ -122,7 +121,9 @@ $main-color: #262626
         &-price
             margin-bottom: 10px
         &-cart
-            color: #0ba520
+            a
+                color: #0ba520
+                text-decoration: none
     
 .line
     width: 100%

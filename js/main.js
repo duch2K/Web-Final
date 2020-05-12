@@ -1,1 +1,1 @@
-const qwer = document.querySelector('.class');
+
