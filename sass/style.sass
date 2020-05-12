@@ -72,6 +72,7 @@ $main-color: #262626
                 color: $main-color
 
 .wrapper
+    min-height: 500px
     &__inner
         padding: 30px 0
         display: flex
@@ -168,34 +169,45 @@ $main-color: #262626
 
 .product
     display: flex
-    
+    padding: 3em 0
+       
     &__image
-        background: #aeaeae
-        padding: 10px
         margin: 10px   
-        width: 50%         
+        width: 50%
+        height: 50%
+        -webkit-box-shadow: 3px 6px 20px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 3px 6px 20px 0px rgba(0,0,0,0.75);
+        box-shadow: 3px 6px 20px 0px rgba(0,0,0,0.75);
+        display: flex
+        justify-content: center
+        align-items: center
+        img         
+            width: 100%
+            display: block
 
     &__title
         font-size: 50px
-        padding: 2px
+        margin: 0 0 0.3em
     &__price
         font-size: 30px
-        padding: 2px
+        margin: 0.4em 0em
     &__desc
         font-size: 20px
-        padding: 2px
+        margin: 1em 0em
     &__tocart       
         display: block
         background-color: #4CAF50;
         border: none;
         color: white;
-        padding: 12px 40px;
+        padding: 0.8em 5em;
         text-align: center;
         text-decoration: none;
         display: inline-block;
         font-size: 18px;
+        margin: 1em 0
 
 
     &__characteristics
+        margin-left: 2em
         
         
