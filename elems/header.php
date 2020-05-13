@@ -18,7 +18,7 @@
 </head>
 <body>
 
-<div class="overlay">
+<div class="overlay" style="display:none;">
     <div>
 
     </div>
