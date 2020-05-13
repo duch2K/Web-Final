@@ -18,20 +18,36 @@
 </head>
 <body>
 
-<div class="overlay" style="display:none;">
-    <div>
+<div class="overlay overlay-login" style="display:none;">
+    <form action="" method="POST" class="form form-overlay login-form">
+        <div class="close close-login">
+        </div>
+        <div class="input login-input">
+            <label>Email:</label>
+            <input type="email" name="email">
+        </div>
+        <div class="input login-input">
+            <label>Password:</label>
+            <input type="password" name="password">
+        </div>
+        <button type="submit" name="login">Log in</button>
+        
+    </form>
+</div>
 
-    </div>
-    <form action="" method="POST">
-        <div class="form-input">
-            <label></label>
-            <input>
+<div class="overlay overlay-signup" style="display:none;">
+    <form action="" method="POST" class="form-overlay signup-form">
+        <div class="close close-login">
         </div>
-        <div class="form-input">
-            <label></label>
-            <input>
+        <div class="input login-input">
+            <label>Email:</label>
+            <input type="email" name="email">
         </div>
-        <button type="submit">Log in</button>
+        <div class="input login-input">
+            <label>Password:</label>
+            <input type="password" name="password">
+        </div>
+        <button type="submit" name="login">Log in</button>
         
     </form>
 </div>
@@ -58,8 +74,9 @@
                 </div>
                 <div class="header__user">
                     <img src="img/user.png" alt="user">
+                    <div class="header__user-login">Log in</div>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 </header>
