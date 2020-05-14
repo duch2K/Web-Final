@@ -19,35 +19,41 @@
 <body>
 
 <div class="overlay overlay-login">
-    <form action="" method="POST" class="form form-overlay login-form">
-        <div class="close close-login"></div>
+    <form action="" method="POST" class="form-login form-overlay">
+        <div class="close close-signup"></div>
         <h2 class="form-title">Log in</h2>
         <div class="input login-input">
-            <label for="email">Email:</label>
-            <input type="email" name="email">
+            <input type="email" name="email" placeholder="Email">
         </div>
         <div class="input login-input">
-            <label for="password">Password:</label>
-            <input type="password" name="password">
+            <input type="password" name="password" placeholder="Password">
         </div>
         <button type="submit" name="login">Log in</button>
         
+        <div class="signup-suggest">Don't have an account? <span class="signup-link">Sign up</span></div>
     </form>
 </div>
 
-<div class="overlay overlay-signup" style="display:none;">
-    <form action="" method="POST" class="form-overlay signup-form">
-        <div class="close close-login">
+<div class="overlay overlay-signup">
+<form action="" method="POST" class="form-signup form-overlay">
+        <div class="close"></div>
+        <h2 class="form-title">Sign up</h2>
+        <div class="input signup-input">
+            <input type="email" name="email" placeholder="Email">
         </div>
         <div class="input login-input">
-            <label>Email:</label>
-            <input type="email" name="email">
+            <input type="password" name="password" placeholder="Name">
         </div>
         <div class="input login-input">
-            <label>Password:</label>
-            <input type="password" name="password">
+            <input type="password" name="password" placeholder="Surname">
         </div>
-        <button type="submit" name="login">Log in</button>
+        <div class="input login-input">
+            <input type="password" name="password" placeholder="Password">
+        </div>
+        <div class="input login-input">
+            <input type="password" name="password" placeholder="Repeat password">
+        </div>
+        <button type="submit" name="signup">Sign up</button>
         
     </form>
 </div>

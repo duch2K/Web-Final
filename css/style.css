@@ -185,13 +185,15 @@ body {
   background: #fff;
   position: relative;
   width: 80%;
-  max-width: 450px;
+  max-width: 350px;
   text-align: center;
-  padding: 40px;
-  padding-right: 50px;
+  padding: 40px 0 20px;
+  border-radius: 5px;
 }
 
 .form-overlay button {
+  margin-top: 10px;
+  margin-bottom: 30px;
   padding: 7px 15px;
   border-radius: 5px;
   font-size: 13px;
@@ -215,30 +217,12 @@ body {
 }
 
 .input {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.input label {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  text-align: right;
-  padding-right: 7px;
-  padding-bottom: 2px;
+  margin: 0 auto;
+  width: 60%;
 }
 
 .input input {
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
+  width: 100%;
   display: block;
   padding: 5px 5px 2px;
   font-size: 16px;
@@ -261,6 +245,17 @@ select:-webkit-autofill:focus {
   -webkit-text-fill-color: #000;
   -webkit-box-shadow: 0 0 0px 1000px #fff inset;
           box-shadow: 0 0 0px 1000px #fff inset;
+}
+
+.signup-suggest {
+  font-size: 13px;
+  color: #aeaeae;
+}
+
+.signup-suggest span {
+  color: #48f;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .close {
