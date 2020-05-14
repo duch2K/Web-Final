@@ -211,6 +211,10 @@ body {
   outline: none;
 }
 
+.form-signup {
+  padding-bottom: 0;
+}
+
 .form-title {
   text-align: center;
   margin-bottom: 30px;
@@ -314,7 +318,6 @@ select:-webkit-autofill:focus {
 }
 
 .nav__item {
-  padding: 15px 25px;
   -webkit-transition: background 0.3s ease;
   transition: background 0.3s ease;
 }
@@ -322,6 +325,8 @@ select:-webkit-autofill:focus {
 .nav__item a {
   text-decoration: none;
   color: #fff;
+  display: block;
+  padding: 15px 25px;
 }
 
 .nav__item:hover {

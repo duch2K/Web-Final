@@ -19,7 +19,7 @@
 <body>
 
 <div class="overlay overlay-login">
-    <form action="" method="POST" class="form-login form-overlay">
+    <form action="actions/login.php" method="POST" class="form-login form-overlay">
         <div class="close close-login"></div>
         <h2 class="form-title">Log in</h2>
         <div class="input login-input">
@@ -35,23 +35,23 @@
 </div>
 
 <div class="overlay overlay-signup">
-<form action="" method="POST" class="form-signup form-overlay">
+<form action="actions/signup.php" method="POST" class="form-signup form-overlay">
         <div class="close close-signup"></div>
         <h2 class="form-title">Sign up</h2>
         <div class="input signup-input">
-            <input type="email" name="email" placeholder="Email">
+            <input type="email" name="email" placeholder="Email" required>
         </div>
         <div class="input login-input">
-            <input type="password" name="password" placeholder="Name">
+            <input type="text" name="name" placeholder="Name" required>
         </div>
         <div class="input login-input">
-            <input type="password" name="password" placeholder="Surname">
+            <input type="text" name="surname" placeholder="Surname" required>
         </div>
         <div class="input login-input">
-            <input type="password" name="password" placeholder="Password">
+            <input type="password" name="password" placeholder="Password" required>
         </div>
         <div class="input login-input">
-            <input type="password" name="password" placeholder="Repeat password">
+            <input type="password" name="password2" placeholder="Repeat password" required>
         </div>
         <button type="submit" name="signup">Sign up</button>
         
@@ -90,9 +90,9 @@
 <nav class="nav">
     <div class="container">
         <div class="nav__inner">
-            <div class="nav__item"><a href="#">Catalogue</a></div>
-            <div class="nav__item"><a href="#">About</a></div>
-            <div class="nav__item"><a href="#">Contacts</a></div>
+            <div class="nav__item"><a href="index.php">Catalogue</a></div>
+            <div class="nav__item"><a href="about.php">About</a></div>
+            <div class="nav__item"><a href="contacts.php">Contacts</a></div>
         </div>
     </div>
 </nav>

@@ -24,6 +24,7 @@ function addModal(triggerClass, overlayClass, closeClass) {
             arrOverlays.forEach(item => {
                 item.classList.remove('overlay-active');
             });
+            document.body.classList.toggle('body-overlay');
         }
     });
 
