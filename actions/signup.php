@@ -7,9 +7,11 @@ if (isset($_POST['signup'])) {
     $passwd = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
     $passwd2 = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
 
-    if (true) {
+    if ($passwd != $passwd2) {
 
     } else {
+        password_hash($passwd, PASSWORD_DEFAULT);
+
         $connect->query("INSERT INTO User (name, surname, email, password) 
             VALUES ('$name', '$surname', '$email', '$passwd')");
     }
