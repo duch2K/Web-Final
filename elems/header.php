@@ -20,7 +20,8 @@
 
 <div class="overlay overlay-login">
     <form action="" method="POST" class="form form-overlay login-form">
-        <div class="close"></div>
+        <div class="close close-login"></div>
+        <h2 class="form-title">Log in</h2>
         <div class="input login-input">
             <label for="email">Email:</label>
             <input type="email" name="email">

@@ -17,5 +17,6 @@ function addModal(triggerClass, overlayClass, closeClass) {
 
     function toggleModal() {
         overlay.classList.toggle('overlay-active');
+        document.body.classList.toggle('body-overlay');
     }
 }
