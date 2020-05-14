@@ -18,16 +18,15 @@
 </head>
 <body>
 
-<div class="overlay overlay-login" style="display:none;">
+<div class="overlay overlay-login">
     <form action="" method="POST" class="form form-overlay login-form">
-        <div class="close close-login">
-        </div>
+        <div class="close"></div>
         <div class="input login-input">
-            <label>Email:</label>
+            <label for="email">Email:</label>
             <input type="email" name="email">
         </div>
         <div class="input login-input">
-            <label>Password:</label>
+            <label for="password">Password:</label>
             <input type="password" name="password">
         </div>
         <button type="submit" name="login">Log in</button>
