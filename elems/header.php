@@ -20,7 +20,7 @@
 
 <div class="overlay overlay-login">
     <form action="" method="POST" class="form-login form-overlay">
-        <div class="close close-signup"></div>
+        <div class="close close-login"></div>
         <h2 class="form-title">Log in</h2>
         <div class="input login-input">
             <input type="email" name="email" placeholder="Email">
@@ -36,7 +36,7 @@
 
 <div class="overlay overlay-signup">
 <form action="" method="POST" class="form-signup form-overlay">
-        <div class="close"></div>
+        <div class="close close-signup"></div>
         <h2 class="form-title">Sign up</h2>
         <div class="input signup-input">
             <input type="email" name="email" placeholder="Email">
