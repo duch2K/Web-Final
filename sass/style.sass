@@ -226,11 +226,14 @@ select:-webkit-autofill:focus
         display: flex
         flex-wrap: wrap
         margin: -10px -5px
+        .shop-item:hover
+            border: 1px dashed #0ba520
+            padding: 9px 9px                
         .shop-item
-            width: 24.5%
-            padding: 10px 5px
+            width: 25%
+            padding: 10px 10px
             overflow: hidden
-            margin-bottom: 10px
+            margin-bottom: 10px                       
             &-img
                 display: flex
                 justify-content: center
@@ -244,11 +247,12 @@ select:-webkit-autofill:focus
                     max-width: 99.9%
             &-title
                 margin-bottom: 10px
-                padding-right: 5px
                 font-size: 16px
+                text-align: center
             &-price
                 margin-bottom: 10px
-                font-size: 14px
+                font-size: 15px
+                text-align: center
             &-cart
                 font-size: 14px
                 a
