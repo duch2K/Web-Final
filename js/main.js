@@ -9,6 +9,18 @@ signupLink.addEventListener('click', () => {
     login.classList.toggle('form-hide');
 });
 
+
+
+function signupValidate() {
+    
+}
+
+function signupValidate() {
+    
+}
+
+
+
 function addModal(triggerClass, overlayClass, closeClass) {
     const trigger = document.querySelector('.' + triggerClass),
         overlay = document.querySelector('.' + overlayClass),
