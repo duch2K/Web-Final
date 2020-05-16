@@ -5,7 +5,7 @@ if (isset($_POST['signup'])) {
     $name = filter_var(trim($_POST['name']), FILTER_SANITIZE_STRING);
     $surname = filter_var(trim($_POST['surname']), FILTER_SANITIZE_STRING);
     $passwd = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
-    $passwd2 = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
+    $passwd2 = filter_var($_POST['password2'], FILTER_SANITIZE_STRING);
 
     if ($passwd != $passwd2) {
 
