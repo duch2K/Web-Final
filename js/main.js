@@ -57,7 +57,7 @@ function signupValidate(formClass, nameClass, surnameClass, passwdClass, passwd2
             }
             return;
         } 
-        event.stopPropagation();
+        event.preventDefault();
     });
 }
 
