@@ -35,19 +35,23 @@
         <div class="close close-signup"></div>
         <h2 class="form-title">Sign up</h2>
         <div class="input signup-input">
-            <input type="email" name="email" placeholder="Email" required>
+            <input type="email" name="email" class="signup-email" placeholder="Email" required>
         </div>
-        <div class="input login-input">
-            <input type="text" name="name" placeholder="Name" required>
+        <div class="input signup-input">
+            <input type="text" name="name" class="signup-name" placeholder="Name" required>
+            <div class="form-error error-email"></div>
         </div>
-        <div class="input login-input">
-            <input type="text" name="surname" placeholder="Surname" required>
+        <div class="input signup-input">
+            <input type="text" name="surname" class="signup-surname" placeholder="Surname" required>
+            <div class="form-error error-email"></div>
         </div>
-        <div class="input login-input">
-            <input type="password" name="password" placeholder="Password" required>
+        <div class="input signup-input">
+            <input type="password" name="password" class="signup-password" placeholder="Password" required>
+            <div class="form-error error-email"></div>
         </div>
-        <div class="input login-input">
-            <input type="password" name="password2" placeholder="Repeat password" required>
+        <div class="input signup-input">
+            <input type="password" name="password2" class="signup-password2" placeholder="Repeat password" required>
+            <div class="form-error error-email"></div>
         </div>
         <button type="submit" name="signup">Sign up</button>
         

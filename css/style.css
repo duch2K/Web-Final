@@ -302,7 +302,18 @@ select:-webkit-autofill:focus {
 }
 
 .input {
+  display: block;
   margin-bottom: 20px;
+}
+
+.input input {
+  border: 1px solid #aeaeae;
+  border-radius: 5px;
+}
+
+.form-error {
+  color: red;
+  font-size: 13px;
 }
 
 .nav {
