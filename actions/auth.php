@@ -11,7 +11,6 @@ if (isset($_POST)) {
         WHERE email = '$email' AND password = '$passwd';")
         ->fetch(PDO::FETCH_ASSOC);
 
-    $account = json_encode($account);
-
-    echo $account;
 }
+
+header("Location: index.php");

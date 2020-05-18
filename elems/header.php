@@ -19,10 +19,11 @@
         <div class="close close-login"></div>
         <h2 class="form-title">Log in</h2>
         <div class="input login-input">
-            <input type="email" name="email" placeholder="Email">
+            <input type="email" name="email" class="login-email" placeholder="Email">
         </div>
         <div class="input login-input">
-            <input type="password" name="password" placeholder="Password">
+            <input type="password" name="password" class="login-password" placeholder="Password">
+            <div class="form-error error-email"></div>
         </div>
         <button type="submit" name="login">Log in</button>
         

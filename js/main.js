@@ -1,6 +1,7 @@
 addModal('header__user-login', 'overlay-login', 'close-login');
 addModal('signup-link', 'overlay-signup', 'close-signup');
 signupValidate('form-signup', 'signup-name', 'signup-surname', 'signup-password', 'signup-password2');
+loginValidate('form-login', 'login-email', 'login-password');
 
 const login = document.querySelector('.form-login'),
     signup = document.querySelector('.form-signup'),
@@ -61,7 +62,32 @@ function signupValidate(formClass, nameClass, surnameClass, passwdClass, passwd2
     });
 }
 
+function loginValidate(formClass, emailClass, passwdClass) {
+    const form = document.querySelector('.' + formClass), 
+        email = document.querySelector('.' + emailClass),
+        passwd = document.querySelector('.' + passwdClass);
 
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const formData = new FormData(this);
+
+        fetch('actions/login.php', {
+            method: 'post',
+            body: formData
+        }).then(result => result.text()).then(resText => {
+            console.log(resText);
+            if (resText == 'false') {
+                throw new Error();
+            } else {
+                window.location.href = "actions/auth.php";
+            }
+        }).catch(error => {
+            console.error(error);
+            form.querySelector('.form-error').textContent = 'Wrong email or password!';
+        });
+    });
+}
 
 function addModal(triggerClass, overlayClass, closeClass) {
     const trigger = document.querySelector('.' + triggerClass),
