@@ -1,16 +1,16 @@
 <?php
 require_once "../config/db.php";
 
-if (isset($_POST)) {
+if (isset($_POST['email'])) {
 
     $email = $_POST['email'];
-    $passwd = $_POST['password'];
-    //$passwd = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    $account = $connect->query("SELECT email, password FROM User 
-        WHERE email = '$email' AND password = '$passwd';")
-        ->fetch(PDO::FETCH_ASSOC);
+    $user = $connect->query("SELECT email, password FROM User 
+        WHERE email = '$email';")
+        ->fetchAll(PDO::FETCH_ASSOC);
 
+    setcookie('user-email', $user['email'], time() + 3600, "Web-Final/");
+    echo $user['email'];
 }
-
-header("Location: index.php");
+var_dump($_POST);
+// header("Location: ../index.php");

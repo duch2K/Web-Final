@@ -56,21 +56,20 @@ function signupValidate(formClass, nameClass, surnameClass, passwdClass, passwd2
                 passwd2.nextElementSibling.textContent = '';
                 passwd2.style.borderColor = '';
             }
-            return;
+            event.preventDefault();
         } 
-        event.preventDefault();
     });
 }
 
 function loginValidate(formClass, emailClass, passwdClass) {
-    const form = document.querySelector('.' + formClass), 
-        email = document.querySelector('.' + emailClass),
-        passwd = document.querySelector('.' + passwdClass);
+    const form = document.querySelector('.' + formClass);
+        // email = document.querySelector('.' + emailClass),
+        // passwd = document.querySelector('.' + passwdClass);
 
     form.addEventListener('submit', function(event) {
-        event.preventDefault();
 
         const formData = new FormData(this);
+        event.preventDefault(); 
 
         fetch('actions/login.php', {
             method: 'post',
@@ -80,7 +79,8 @@ function loginValidate(formClass, emailClass, passwdClass) {
             if (resText == 'false') {
                 throw new Error();
             } else {
-                window.location.href = "actions/auth.php";
+                //window.location.href = "index.php?user=true";
+                console.log(document.cookie);
             }
         }).catch(error => {
             console.error(error);

@@ -3,6 +3,10 @@
 
     $categories = $connect->query("SELECT * FROM Category")
         ->fetchAll(PDO::FETCH_ASSOC);
+
+    if(isset($_GET['user']) and $_GET['user'] == 'true') {
+        setcookie('user-email', $user['email'], time() + 3600);
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,8 +29,8 @@
             <input type="password" name="password" class="login-password" placeholder="Password">
             <div class="form-error error-email"></div>
         </div>
+
         <button type="submit" name="login">Log in</button>
-        
         <div class="signup-suggest">Don't have an account? <span class="signup-link">Sign up</span></div>
     </form>
 </div>
@@ -81,7 +85,14 @@
                 </div>
                 <div class="header__user">
                     <img src="img/user.png" alt="user">
-                    <div class="header__user-login">Log in</div>
+                    <?php if (isset($_COOKIE['user-email'])): ?>
+                        <div class="user-name">
+                            <?php echo $user['name'] . ' ' . $user['surname']; ?>
+                        </div>
+                    <?php else: ?>
+                        <div class="header__user-login">Log in</div>
+                    <?php endif; ?>
+                    
                 </div>
             </a>
         </div>
