@@ -4,8 +4,11 @@
     $categories = $connect->query("SELECT * FROM Category")
         ->fetchAll(PDO::FETCH_ASSOC);
 
-    if(isset($_GET['user']) and $_GET['user'] == 'true') {
-        setcookie('user-email', $user['email'], time() + 3600);
+    $user = false;
+    if (isset($_COOKIE['user_email'])) {
+        $user = $connect->query("SELECT * FROM User WHERE email = '$_COOKIE[user_email]'")
+            ->fetch(PDO::FETCH_ASSOC);
+        setcookie('user_email', $user['email'], time() + 3600);
     }
 ?>
 <!DOCTYPE html>
@@ -85,7 +88,7 @@
                 </div>
                 <div class="header__user">
                     <img src="img/user.png" alt="user">
-                    <?php if (isset($_COOKIE['user-email'])): ?>
+                    <?php if (isset($_COOKIE['user_email'])): ?>
                         <div class="user-name">
                             <?php echo $user['name'] . ' ' . $user['surname']; ?>
                         </div>

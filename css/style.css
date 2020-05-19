@@ -381,7 +381,7 @@ select:-webkit-autofill:focus {
 
 .sidebar__cats-item:hover a {
   color: #262626;
-  font-size: 20px;
+  font-size: 18px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
@@ -414,16 +414,16 @@ select:-webkit-autofill:focus {
   margin: -10px -5px;
 }
 
-.main__shop .shop-item:hover {
-  border: 1px dashed #0ba520;
-  padding: 9px 9px;
-}
-
 .main__shop .shop-item {
   width: 25%;
   padding: 10px 10px;
   overflow: hidden;
   margin-bottom: 10px;
+}
+
+.main__shop .shop-item:hover {
+  border: 1px dashed #0ba520;
+  padding: 9px 9px;
 }
 
 .main__shop .shop-item-img {

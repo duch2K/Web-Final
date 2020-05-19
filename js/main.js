@@ -74,13 +74,13 @@ function loginValidate(formClass, emailClass, passwdClass) {
         fetch('actions/login.php', {
             method: 'post',
             body: formData
-        }).then(result => result.text()).then(resText => {
+        }).then(result => result.json()).then(resText => {
             console.log(resText);
             if (resText == 'false') {
                 throw new Error();
             } else {
-                //window.location.href = "index.php?user=true";
-                console.log(document.cookie);
+                document.cookie = 'user_email=' + resText.email; 
+                window.location.href = "index.php";
             }
         }).catch(error => {
             console.error(error);

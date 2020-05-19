@@ -52,7 +52,7 @@
                             </a>
                         </h3>
                         <div class="shop-item-price"><?php echo $product['price'] ?> USD</div>
-                        <div class="shop-item-cart"><a href="add-cart.php?product=<?php echo $product['id'] ?>">Add to cart</a></div>
+                        <div class="shop-item-cart"><a href="add-cart.php?product=<?php echo $product['title'] ?>">Add to cart</a></div>
                     </div>
                 <?php } ?>
                     
