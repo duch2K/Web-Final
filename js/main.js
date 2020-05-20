@@ -1,7 +1,7 @@
 addModal('header__user-login', 'overlay-login', 'close-login');
 addModal('signup-link', 'overlay-signup', 'close-signup');
 signupValidate('form-signup', 'signup-name', 'signup-surname', 'signup-password', 'signup-password2');
-loginValidate('form-login', 'login-email', 'login-password');
+loginValidate('form-login');
 
 const login = document.querySelector('.form-login'),
     signup = document.querySelector('.form-signup'),
@@ -56,12 +56,11 @@ function signupValidate(formClass, nameClass, surnameClass, passwdClass, passwd2
                 passwd2.nextElementSibling.textContent = '';
                 passwd2.style.borderColor = '';
             }
-            event.preventDefault();
         } 
     });
 }
 
-function loginValidate(formClass, emailClass, passwdClass) {
+function loginValidate(formClass) {
     const form = document.querySelector('.' + formClass);
         // email = document.querySelector('.' + emailClass),
         // passwd = document.querySelector('.' + passwdClass);

@@ -6,6 +6,9 @@
         $products = $connect->query("SELECT P.* FROM Product P JOIN Category C ON
             P.categoryID = C.id WHERE C.title = '$cat'");
     
+    } else if (isset($_GET['search'])) {
+        $searchName = $_GET['search'];
+        $products = $connect->query("SELECT * FROM Product WHERE name LIKE '%$searchName%'");
     } else {
         $products = $connect->query("SELECT * FROM Product");
     }
@@ -52,7 +55,7 @@
                             </a>
                         </h3>
                         <div class="shop-item-price"><?php echo $product['price'] ?> USD</div>
-                        <div class="shop-item-cart"><a href="add-cart.php?product=<?php echo $product['title'] ?>">Add to cart</a></div>
+                        <div class="shop-item-cart"><a href="actions/add-cart.php?product=<?php echo $product['id'] ?>">Add to cart</a></div>
                     </div>
                 <?php } ?>
                     

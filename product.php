@@ -19,7 +19,7 @@
                 <div class="product__title"><?php echo $product['name'] ?></div>
                 <div class="product__price"><?php echo $product['price'] ?> USD</div>
                 <div class="product__desc"><?php echo $product['descr'] ?></div>
-                <a href="add-cart.php?product=<?php echo $product['id'] ?>" class="product__tocart">To Cart</a>
+                <a href="actions/add-cart.php?product=<?php echo $product['id'] ?>" class="product__tocart">To Cart</a>
             </div>
         </div>  
 

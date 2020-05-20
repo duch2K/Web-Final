@@ -75,12 +75,12 @@
                 </a>
             </div>
             <div class="header__center">
-                <div class="header__search">
-                    <input type="text" class="header__search-input" placeholder="Search in catalogue...">
-                    <div class="header__search-btn">
+                <form action="index.php" method="GET" class="header__search">
+                    <input type="text" name="search" class="header__search-input" placeholder="Search in catalogue...">
+                    <button type="submit" class="header__search-btn">
                         <img src="img/search.svg" class="search-btn" alt="search">
-                    </div>
-                </div>
+                    </button>
+                </form>
             </div>
             <div class="header__r">
                 <div class="header__cart">
