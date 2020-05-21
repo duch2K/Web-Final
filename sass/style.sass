@@ -238,22 +238,35 @@ select:-webkit-autofill:focus
     flex: 3.5  
     &__cart
         &-item
+            &:last-child
+                border-bottom: none  
+            border-bottom: 1px solid #aeaeae
             display: flex
-            .-desc
-                width: 100%
-                display: flex           
-            
+            padding: 10px
+            align-items: center
+            &-desc
+                flex: 5
+                display: flex
+                align-items: flex-end      
             &-img
+                display: flex
+                align-items: center
+                justify-content: center
+                flex: 1
                 width: 100px
                 height: 100px
+                margin-right: 20px
                 img 
-                    height: 100%
-            &-price
-                text-align: right               
+                    max-width: 100%
+                    max-height: 100%
+            &-price            
                 font-size: 18px
+                flex: 1
 
             &-title 
+                flex: 3
                 font-size: 22px
+                margin-right: 20px
                 
             
 
