@@ -84,7 +84,15 @@
             </div>
             <div class="header__r">
                 <div class="header__cart">
-                    <img src="img/cart.png" alt="cart">
+                <?php if (isset($_COOKIE['user_email'])): ?>
+                    <a href="cart.php?user=<?php echo $user['id']; ?>">
+                        <img src="img/cart.png" alt="cart">
+                    </a>    
+                <?php else: ?>
+                    <a href="cart.php?user=<?php echo $user['id']; ?>">
+                        <img src="img/cart.png" alt="cart">
+                    </a>
+                <?php endif; ?>
                 </div>
                 <div class="header__user">
                     <img src="img/user.png" alt="user">
