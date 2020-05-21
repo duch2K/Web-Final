@@ -236,6 +236,27 @@ select:-webkit-autofill:focus
 
 .main
     flex: 3.5  
+    &__cart
+        &-item
+            display: flex
+            .-desc
+                width: 100%
+                display: flex           
+            
+            &-img
+                width: 100px
+                height: 100px
+                img 
+                    height: 100%
+            &-price
+                text-align: right               
+                font-size: 18px
+
+            &-title 
+                font-size: 22px
+                
+            
+
     &__title
         margin-bottom: 20px
     &__shop
@@ -348,13 +369,16 @@ select:-webkit-autofill:focus
     &__characteristics
         margin-left: 2em
 
-.contacts    
-    h1
-        text-align: center
-        font-size: 2.4em
-        margin: 2em 0
+
+.page-title       
+    text-align: center
+    font-size: 2.4em
+    margin: 2em 0
+    width: 100%
+
+.contacts
     p
-        margin: 1em 0
+        margin: 1em 0    
     a 
         color: #000
     strong
@@ -363,16 +387,4 @@ select:-webkit-autofill:focus
     &__table
         td 
             padding: 0.6em 2em 0.6em 1em
-
-.about
-    h1
-        text-align: center
-        font-size: 2.4em
-        margin: 2em 0
-    p
-        margin: 1em 0
-    a 
-        color: #000
-    strong
-        margin: -0.8em
-        font-size: 20px
+   

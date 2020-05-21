@@ -406,6 +406,37 @@ select:-webkit-autofill:focus {
           flex: 3.5;
 }
 
+.main__cart-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main__cart-item .-desc {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main__cart-item-img {
+  width: 100px;
+  height: 100px;
+}
+
+.main__cart-item-img img {
+  height: 100%;
+}
+
+.main__cart-item-price {
+  text-align: right;
+  font-size: 18px;
+}
+
+.main__cart-item-title {
+  font-size: 22px;
+}
+
 .main__title {
   margin-bottom: 20px;
 }
@@ -589,10 +620,11 @@ select:-webkit-autofill:focus {
   margin-left: 2em;
 }
 
-.contacts h1 {
+.page-title {
   text-align: center;
   font-size: 2.4em;
   margin: 2em 0;
+  width: 100%;
 }
 
 .contacts p {
@@ -610,24 +642,5 @@ select:-webkit-autofill:focus {
 
 .contacts__table td {
   padding: 0.6em 2em 0.6em 1em;
-}
-
-.about h1 {
-  text-align: center;
-  font-size: 2.4em;
-  margin: 2em 0;
-}
-
-.about p {
-  margin: 1em 0;
-}
-
-.about a {
-  color: #000;
-}
-
-.about strong {
-  margin: -0.8em;
-  font-size: 20px;
 }
 /*# sourceMappingURL=style.css.map */
