@@ -8,7 +8,7 @@
     if (isset($_COOKIE['user_email'])) {
         $user = $connect->query("SELECT * FROM User WHERE email = '$_COOKIE[user_email]'")
             ->fetch(PDO::FETCH_ASSOC);
-        setcookie('user_email', $user['email'], time() + 3600);
+        setcookie('user_email', $user['email'], time() + 3600, '/Web-Final');
     }
 ?>
 <!DOCTYPE html>
@@ -88,8 +88,11 @@
                     <a href="cart.php?user=<?php echo $user['id']; ?>">
                         <img src="img/cart.png" alt="cart">
                     </a>    
-                <?php else: ?>
-                    <a href="cart.php?user=<?php echo $user['id']; ?>">
+                <?php else: ?>                    
+                <script>function fun() {              
+                   alert("\n                                                         Please login");
+                }</script>
+                    <a href="cart.php?user=<?php echo $user['id']; ?>" onclick="fun()">
                         <img src="img/cart.png" alt="cart">
                     </a>
                 <?php endif; ?>
@@ -97,11 +100,12 @@
                 <div class="header__user">
                     <img src="img/user.png" alt="user">
                     <?php if (isset($_COOKIE['user_email'])): ?>
-                        <div class="user-name">
-                            <?php echo $user['name'] . ' ' . $user['surname']; ?>
+                        <div class="user-name">                        
+                            <?php echo $user['name'] . ' ' . $user['surname']; ?>                            
                         </div>
+                        <a class="logout" href="actions/logout.php"><img src="img/logout.svg" alt="logout"></a>
                     <?php else: ?>
-                        <div class="header__user-login">Log in</div>
+                        <div class="header__user-login">Log in</div>                        
                     <?php endif; ?>
                     
                 </div>

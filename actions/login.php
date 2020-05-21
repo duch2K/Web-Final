@@ -14,7 +14,7 @@ if (isset($_POST['email'])) {
         $user = json_encode($user);
         echo $user; 
     } else {
-        echo 'false'; 
+        echo '  '; 
     }
 
 }
