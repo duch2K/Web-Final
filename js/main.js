@@ -78,8 +78,8 @@ function loginValidate(formClass) {
             if (resText == 'false') {
                 throw new Error();
             } else {
-                document.cookie = 'user_email=' + resText.email; 
-                window.location.href = "index.php";
+                // document.cookie = 'user_email=' + resText.email; 
+                // window.location.href = "index.php";
             }
         }).catch(error => {
             console.error(error);
