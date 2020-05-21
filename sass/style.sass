@@ -19,6 +19,8 @@ body
 
 .header
     padding: 15px 0
+    &__cart
+        cursor: pointer
     &__inner
         display: flex
     &__logo
@@ -188,6 +190,15 @@ select:-webkit-autofill:focus
     font-size: 13px
     text-align: left
 
+.logout 
+    margin-left: 5px
+    width: 20px  
+    img 
+        display: block
+        width: 100%
+
+   
+
 .nav
     background: $main-color
     width: 100%
@@ -215,6 +226,35 @@ select:-webkit-autofill:focus
 .sidebar
     flex: 1
     padding-right: 30px
+
+    &__order        
+        &-total
+            display: flex
+            font-size: 28px
+            font-weight: 600   
+            justify-content: space-between 
+            margin-bottom: 1em       
+            &-price
+                color: #0ba520                
+        &-btn            
+            a
+                text-decoration: none
+                display: block
+                width: 90%
+                margin: 0 auto
+                text-align: center
+                padding: 1em 0
+                border: none
+                outline: none
+                background-color: #0ba520
+                color: #fff
+                font-size: 20px
+                text-transform: uppercase
+                font-weight: 600
+                cursor: pointer
+
+        
+
     &__catalogue
         &-title
             margin-bottom: 15px
@@ -237,6 +277,10 @@ select:-webkit-autofill:focus
 .main
     flex: 3.5  
     &__cart
+        .no-login
+            font-size: 40px
+            color: #aeaeae
+            text-align: center
         &-item
             &:last-child
                 border-bottom: none  
@@ -267,6 +311,15 @@ select:-webkit-autofill:focus
                 flex: 3
                 font-size: 22px
                 margin-right: 20px
+            &-delete
+                display: flex
+                align-items: center
+                justify-content: center
+                width: 24px
+                height: 24px
+                img 
+                    max-width: 100%
+                    max-height: 100%
                 
             
 

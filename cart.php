@@ -20,6 +20,7 @@
         <div class="wrapper__inner">            
             <main class="main">                
                 <div class="main__cart">
+                    <?php if (isset($_COOKIE['user_email'])): ?>
                     <?php foreach ($products as $product): ?>
                     <div class="main__cart-item">
                         <div class="main__cart-item-img">
@@ -28,18 +29,36 @@
                         <div class="main__cart-item-desc">
                             <div class="main__cart-item-title"><?php echo $product['name'] ?></div>
                             <div class="main__cart-item-price"><?php echo $product['price'] ?> USD</div> 
+                        </div>
+                        <div class="main__cart-item-delete">
+                            <a href="actions/cart-delete.php?product=<?php echo $product['id'] ?>"><img src="img/delete.svg" alt="delete"></a>  
                         </div>                       
                     </div>
                     <?php endforeach; ?>
+                    <?php else: ?>
+                        <div class="no-login">Please login!</div>
+                    <?php endif; ?>
                 </div>
             </main>
 
             <aside class="sidebar">
-                <div class="sidebar__catalogue">
-                    <h3>Total: </h3>
-                    <div class="sidebar__catalogue-total"></div>
-                    <div class="sidebar__catalogue-btn">
-                        <button>Order</button>
+                <div class="sidebar__order">
+                    <div class="sidebar__order-total">
+                        <div>Total: </div>
+                        <div class="sidebar__order-total-price">
+                        <?php
+                        if (isset($_COOKIE['user_email'])):
+                            $total = 0;
+                            foreach ($products as $product):
+                                $total += $product['price'];
+                            endforeach;
+                            echo $total . " USD";
+                        endif;
+                        ?>
+                        </div>
+                    </div>
+                    <div class="sidebar__order-btn">
+                        <a href="new-order.php">Order</a>   
                     </div>
                 </div>
             </aside>
